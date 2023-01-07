@@ -1,0 +1,38 @@
+window:
+  padding:
+    x: 10
+    y: 5
+  opacity: 0.8	
+
+font:
+  size: 12.0
+  normal:
+    family: Fira Mono
+    style: Medium
+  bold:
+    family: Fira Mono
+  italic:
+    family: Fira Mono
+
+colors:
+  #onedark color scheme
+  #https://github.com/joshdick/onedark.vim
+  normal:
+    black:   '#282c34'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
+  #I added 25 to each value
+  bright:
+    black:   '#41454D'
+    red:     '#f9858e'
+    green:   '#d2dc92'
+    yellow:  '#fed994'
+    blue:    '#7ac8ff'
+    magenta: '#df91f6'
+    cyan:    '#6fcfdb'
+    white:   '#c4cbd8'
