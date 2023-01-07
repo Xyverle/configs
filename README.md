@@ -1,5 +1,5 @@
 # How to use
-install alacritty and vim
+Install Alacritty and Vim
 ```sh
 chmod +x install.sh
 ./install.sh
