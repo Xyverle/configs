@@ -1,3 +1,4 @@
+![](SampleImage.png)
 # How to use
 Install Alacritty and Vim
 ```sh
