@@ -15,7 +15,7 @@ Finally Restart and Vim should tell you to install rust analyzer
 
 Do so and it should have rust autocompletion
 
-#Autocompletion
+# Autocompletion
 If you want autocompletion for languages other than rust see
 
 https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
