@@ -13,6 +13,7 @@ let g:lightline = {
 	\ 'colorscheme': 'onedark',
 	\ }
 inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<tab>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 "basic settings
 colorscheme onedark
@@ -34,6 +35,7 @@ inoremap ' ''<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
+inoremap < <><Left>
 
 " Automatically turn on/off paste mode
 let &t_SI .= "\<Esc>[?2004h"
