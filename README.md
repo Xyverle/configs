@@ -2,7 +2,7 @@
 ![](SampleImage.png)
 
 # How to use
-Install Alacritty and Vim
+Install Alacritty, Vim and Nodejs
 ```sh
 chmod +x install.sh
 ./install.sh
