@@ -6,7 +6,7 @@ Install Alacritty, Vim, Nodejs, fzf and The Silver Searcher
 ```
 pacman -S alacritty vim nodejs fzf the_silver_searcher
 ```
-
+Install the config
 ```sh
 chmod +x install.sh
 ./install.sh
