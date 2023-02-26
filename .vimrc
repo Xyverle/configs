@@ -22,9 +22,9 @@ let g:inline_comment_dict = {'//': ["rs", "js", "ts", "cpp", "c", "dart"],'#': [
 inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "set<tab>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "set<CR>"
 "	Basic settings
-set history=500
-set	noerrorbells
-set	number relativenumber
+autocmd VimEnter * set noshowmode
+set history=500 noerrorbells
+set number relativenumber
 set hlsearch
 set incsearch
 set autoindent
