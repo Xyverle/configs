@@ -35,7 +35,7 @@ set tabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
 nnoremap S :%s//g<Left><Left>
-nnoremap F /set</><Left><Left>
+nnoremap F /</><Left><Left>
 nnoremap p p`[v`]=
 "	Automatically turn on/off paste mode
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
