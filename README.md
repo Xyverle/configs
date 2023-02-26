@@ -3,7 +3,7 @@
 
 # How to use
 Install Alacritty, Vim, Nodejs, fzf and The Silver Searcher
-```
+```sh
 pacman -S alacritty vim nodejs fzf the_silver_searcher
 ```
 Install the config
