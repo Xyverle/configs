@@ -7,7 +7,7 @@ Install Alacritty, Vim and Nodejs
 chmod +x install.sh
 ./install.sh
 ```
-# Language Server
+# Vim Language Server
 If you want autocompletion see
 
 https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
