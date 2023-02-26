@@ -7,9 +7,10 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'KarimElghamry/vim-auto-comment'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 call plug#end()
 filetype plugin on
-set laststatus=2
 augroup my-fern-startup
 	autocmd! *
 	autocmd VimEnter * ++nested Fern -drawer ..
@@ -35,7 +36,6 @@ set incsearch
 set autoindent
 set smartindent
 set tabstop=4
-set softtabstop=4
 set shiftwidth=4
 nnoremap S :%s//g<Left><Left>
 
@@ -44,7 +44,7 @@ let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
+	set pastetoggle=<Esc>[201~	
+	set paste
+	return ""
 endfunction
