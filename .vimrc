@@ -1,21 +1,32 @@
-"plugins
+"Plugins
 call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'itchyny/lightline.vim'
-	Plug 'preservim/nerdtree'
+	Plug 'lambdalisue/fern.vim'
+	Plug 'cohama/lexima.vim'
 	Plug 'joshdick/onedark.vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'KarimElghamry/vim-auto-comment'
 call plug#end()
-
 filetype plugin on
 set laststatus=2
-autocmd VimEnter * NERDTree | wincmd p 
-let g:lightline = {
-	\ 'colorscheme': 'onedark',
-	\ }
+augroup my-fern-startup
+	autocmd! *
+	autocmd VimEnter * ++nested Fern -drawer ..
+	autocmd VimEnter * wincmd p
+augroup end
+set termguicolors
+let g:airline_powerline_fonts = 1
+let g:airline_theme='onedark'
 inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<tab>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+let g:default_inline_comment = '//'
+let g:inline_comment_dict = {
+		\'//': ["rs", "js", "ts", "cpp", "c", "dart"],
+		\'#': ['py', 'sh'],
+		\'"': ['vim']}
 
-"basic settings
+"Basic settings
 colorscheme onedark
 hi Normal guibg=NONE ctermbg=NONE
 set number relativenumber
@@ -23,26 +34,15 @@ set hlsearch
 set incsearch
 set autoindent
 set smartindent
-set tabstop=3
-set softtabstop=3
+set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 nnoremap S :%s//g<Left><Left>
-"^ when you press capital S in normal mode it opens find/replace
-
-"Closing Stuff
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
-inoremap < <><Left>
 
 " Automatically turn on/off paste mode
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
-
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
-
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste
