@@ -2,7 +2,7 @@
 ![](SampleImage.png)
 
 # How to use
-Install Alacritty, Vim, Nodejs, fzf and The Silver Searcher
+Install Alacritty, Vim, [Nodejs](https://nodejs.org/en/), [fzf](https://github.com/junegunn/fzf) and [The Silver Searcher](https://github.com/ggreer/the_silver_searcher)
 ```sh
 pacman -S alacritty vim nodejs fzf the_silver_searcher
 ```
