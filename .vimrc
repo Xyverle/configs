@@ -19,21 +19,21 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:default_inline_comment = '//'
 let g:inline_comment_dict = {'//': ["rs", "js", "ts", "cpp", "c", "dart"],'#': ['py', 'sh'],'"': ['vim']}
-inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "set<tab>"
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "set<CR>"
+inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<tab>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 "	Basic settings
 autocmd VimEnter * set noshowmode
 set history=500 noerrorbells
-set number relativenumber
-set hlsearch
-set incsearch
-set autoindent
-set smartindent
-set nocompatible
-set termguicolors
-set tabstop=4
-set shiftwidth=4
-set backspace=indent,eol,start
+ \	number relativenumber
+ \  hlsearch
+ \  incsearch
+ \  autoindent smartindent
+ \  nocompatible
+ \  termguicolors
+ \  tabstop=4
+ \  shiftwidth=4
+ \  backspace=indent,eol,start
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 nnoremap S :%s//g<Left><Left>
 nnoremap F /\</><Left><Left>
 nnoremap p p`[v`]=
